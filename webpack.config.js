@@ -28,6 +28,14 @@ module.exports = {
 			{
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+			},
+			{
+				test: /\.(woff|woff2|ttf|otf|eot)$/,
+				use: ['file-loader'],
+			},
+			{
+        test: /\.(png|jpg|svg|gif)$/,
+        use: ['file-loader'],
       },
 		],
 	},
@@ -47,7 +55,7 @@ module.exports = {
 	].filter(Boolean),
 
 	devServer: {  
-    port: 9009,
+    port: 9005,
     hot: true,
 		compress: true,
 		historyApiFallback: true
